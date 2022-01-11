@@ -1,5 +1,9 @@
-<div class="mat-calendar-footer">
-    <button mat-raised-button 
-        *ngFor="let range of ranges"
-        (click)="setRange(range.key)">{{range.label}}</button>
+<div class="mat-calendar-footer" style="margin:30px">
+  <button
+    mat-raised-button
+    *ngFor="let range of ranges"
+    (click)="setRange(range.key)"
+  >
+    {{ range.label }}
+  </button>
 </div>

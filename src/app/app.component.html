@@ -13,13 +13,24 @@
         formControlName="date"
       />
       <sat-datepicker
+        #calendar
         #picker6
         [rangeMode]="true"
+        [closeAfterSelection]="false"
         panelClass="range-datepicker"
-        [calendarFooterComponent]="rangesFooter"
-        [selectFirstDateOnClose]="true"
+        [calendarHeaderComponent]="rangesFooter"
+        [selectFirstDateOnClose]="false"
       >
       </sat-datepicker>
+
+      <!-- <sat-calendar
+        [rangeMode]="true"
+        (dateRangesChange)="inlineRangeChange($event)"
+        (beginDateSelectedChange)="inlineBeginChange($event)"
+        #inlineRangePicker
+      >
+      </sat-calendar> -->
+
       <sat-datepicker-toggle matSuffix [for]="picker6"></sat-datepicker-toggle>
     </mat-form-field>
   </section>
